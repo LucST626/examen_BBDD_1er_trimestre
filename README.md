@@ -25,3 +25,6 @@ La función de mostrar los ganadores.
 El mecanismo de borrar.
 ![Alt text](image-5.png)
 Y el de añadir los participantes de la lista.
+
+
+[Enlace directo a la web en CodePen](https://codepen.io/LucST626/pen/eYXOmwr)
