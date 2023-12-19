@@ -7,9 +7,7 @@
     font-family: system-ui;
     align-items: center;
   }
-  body{
-    
-  }
+  
   #contenedor{
     height: 100vh;
     display: flex;
