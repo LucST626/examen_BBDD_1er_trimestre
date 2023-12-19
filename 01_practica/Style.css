@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+
+:root{
+    font-family: system-ui;
+    align-items: center;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.container {
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.left{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
