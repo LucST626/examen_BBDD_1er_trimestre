@@ -37,24 +37,30 @@ return array[Math.floor(Math.random() * array.length)]
 let maxNames = 10; 
 
 function sortear(){
- console.log("Sortear")
- const ganador = random(lista)
- const contenedor = document.querySelector("#contenedor")
-
- if(contenedor.children.length < maxNames){
-    const elemento = document.createElement("p")
-    elemento.innerHTML = ganador
-    contenedor.appendChild(elemento)
+  console.log("Sortear")
+  const ganador = random(lista)
+  const contenedor = document.querySelector("#contenedor")
+ 
+  if(contenedor.children.length < maxNames){
+     const elemento = document.createElement("p")
+     elemento.innerHTML = ganador
+     contenedor.appendChild(elemento)
+  }
+  else{
+     // Eliminamos todos los elementos p antes de agregar el nuevo elemento p
+     var children = contenedor.children;
+     for(var i = 0; i < children.length; i++){
+         if(children[i].tagName === 'P'){
+             contenedor.removeChild(children[i]);
+             break;
+         }
+     }
+ 
+     const newElement = document.createElement("p")
+     newElement.innerHTML = ganador
+     contenedor.appendChild(newElement)
+  }
  }
- else{
-    while (contenedor.firstChild) {
-        contenedor.removeChild(contenedor.firstChild);
-    }
-    const newElement = document.createElement("p")
-    newElement.innerHTML = ganador
-    contenedor.appendChild(newElement)
- }
-}
 
 function capturarTecla(event){
   if(event.isComposing || event.keyCode === 13){
