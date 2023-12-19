@@ -47,15 +47,14 @@ function sortear(){
      contenedor.appendChild(elemento)
   }
   else{
-     // Eliminamos todos los elementos p antes de agregar el nuevo elemento p
-     var children = contenedor.children;
-     for(var i = 0; i < children.length; i++){
+     let children = contenedor.children;
+     for(let i = 0; i < children.length; i++){
          if(children[i].tagName === 'P'){
              contenedor.removeChild(children[i]);
              break;
          }
      }
- 
+
      const newElement = document.createElement("p")
      newElement.innerHTML = ganador
      contenedor.appendChild(newElement)
