@@ -34,17 +34,25 @@ return array[Math.floor(Math.random() * array.length)]
 
 }
 
-let sorteosMax = 5;
+let maxNames = 10; 
 
 function sortear(){
  console.log("Sortear")
  const ganador = random(lista)
  const contenedor = document.querySelector("#contenedor")
 
- if(contenedor.children.length < sorteosMax){
+ if(contenedor.children.length < maxNames){
     const elemento = document.createElement("p")
     elemento.innerHTML = ganador
     contenedor.appendChild(elemento)
+ }
+ else{
+    while (contenedor.firstChild) {
+        contenedor.removeChild(contenedor.firstChild);
+    }
+    const newElement = document.createElement("p")
+    newElement.innerHTML = ganador
+    contenedor.appendChild(newElement)
  }
 }
 
