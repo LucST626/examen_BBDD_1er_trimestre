@@ -31,7 +31,6 @@ function borrar(){
 }
 function random(array){
 return array[Math.floor(Math.random() * array.length)]
-
 }
 
 let maxNames = 10; 
