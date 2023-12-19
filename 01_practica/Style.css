@@ -14,13 +14,23 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    max-height: 300px;
-    overflow-y: auto;
+    
   }
-  #titulo{
+  #Titulo{
     position: absolute;
-    top: 4;
-    left: 2;
+    top: 0;
+    left: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    background: rgba(0,0,0, 0.7);
+    padding: 1em;
+    height: 100%;
+  }
+  #Titulo p{
+    color: antiquewhite;
   }
   h1{
     user-select: none;
@@ -41,8 +51,10 @@
     font-size: 1vw;
     transition: 0.5s;
   }
+  
   input{
     width: 20%;
     margin-bottom: 1em;
     padding: 0.5em;
   }
+  
